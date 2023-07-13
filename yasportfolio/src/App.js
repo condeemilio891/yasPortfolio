@@ -9,6 +9,7 @@ function App() {
   <NavBar/>
   <Routes>
     <Route path="/"/>
+    <Route path="/portfolio"/>
     <Route path="/contact"/>
     <Route path="/about"/>
   </Routes>
