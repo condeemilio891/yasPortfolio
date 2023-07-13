@@ -1,39 +1,53 @@
-import React, {useState} from 'react'
-import {LeftContainer, NavBarContainer, 
-    NavbarExtendedContainer, NavbarInnerContainer, 
-    NavbarLink, NavbarLinkContainer, RightContainer,
-    Logo,OpenLinksBtn} from "../../styles/NavBarStyle"
-import LogoImg from "../../assets/fatfattatslogo.png"
+import React, { useState } from "react";
+import {
+  NavbarContainer,
+  LeftContainer,
+  RightContainer,
+  NavbarExtendedContainer,
+  NavbarInnerContainer,
+  NavbarLinkContainer,
+  NavbarLink,
+  Logo,
+  OpenLinksButton,
+  NavbarLinkExtended,
+} from "../../styles/NavBarStyle";
+import LogoImg from "../../assets/fatfattatslogo.png";
 
+function Navbar() {
+  const [extendNavbar, setExtendNavbar] = useState(false);
 
-
-const NavBar = () => {
-
-    const [extendNavBar,setExtendNavbar]= useState(false)
   return (
-    <NavBarContainer>
-        <NavbarInnerContainer>
+    <NavbarContainer extendNavbar={extendNavbar}>
+      <NavbarInnerContainer>
         <LeftContainer>
-            <NavbarLinkContainer extendNavBar={extendNavBar}>
-                <NavbarLink to="/">Home</NavbarLink>
-                <NavbarLink to="/portfolio">Portfolio</NavbarLink>
-                <NavbarLink to="/contact">Contact Me</NavbarLink>
-                <NavbarLink to="/about">About</NavbarLink>
-                <OpenLinksBtn
-                onClick={()=>{
-                    setExtendNavbar((curr)=>!curr)
-                }}
-                >
-                    {extendNavBar? <>&#10005;</>:<>&#8801;</>}</OpenLinksBtn>
-            </NavbarLinkContainer>
+          <NavbarLinkContainer>
+            <NavbarLink to="/"> Home</NavbarLink>
+            <NavbarLink to="/products"> Products</NavbarLink>
+            <NavbarLink to="/contact"> Contact Us</NavbarLink>
+            <NavbarLink to="/about"> About Us</NavbarLink>
+            <OpenLinksButton
+              onClick={() => {
+                setExtendNavbar((curr) => !curr);
+              }}
+            >
+              {extendNavbar ? <>&#10005;</> : <> &#8801;</>}
+            </OpenLinksButton>
+          </NavbarLinkContainer>
         </LeftContainer>
         <RightContainer>
-            <Logo src={LogoImg} ></Logo>
+          <Logo src={LogoImg}></Logo>
         </RightContainer>
-        </NavbarInnerContainer>
-        <NavbarExtendedContainer></NavbarExtendedContainer>
-    </NavBarContainer>
-  )
+      </NavbarInnerContainer>
+      {extendNavbar && (
+        <NavbarExtendedContainer>
+          <NavbarLinkExtended to="/"> Home</NavbarLinkExtended>
+          <NavbarLinkExtended to="/products"> Products</NavbarLinkExtended>
+          <NavbarLinkExtended to="/contact"> Contact Us</NavbarLinkExtended>
+          <NavbarLinkExtended to="/about"> About Us</NavbarLinkExtended>
+        </NavbarExtendedContainer>
+      )}
+    </NavbarContainer>
+  );
 }
 
-export default NavBar
+export default Navbar;
