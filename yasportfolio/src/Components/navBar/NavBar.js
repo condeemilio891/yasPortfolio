@@ -22,7 +22,7 @@ function Navbar() {
         <LeftContainer>
           <NavbarLinkContainer>
             <NavbarLink to="/"> Home</NavbarLink>
-            <NavbarLink to="/products"> Products</NavbarLink>
+            <NavbarLink to="/portfolio"> Portfolio</NavbarLink>
             <NavbarLink to="/contact"> Contact Us</NavbarLink>
             <NavbarLink to="/about"> About Us</NavbarLink>
             <OpenLinksButton
@@ -41,7 +41,7 @@ function Navbar() {
       {extendNavbar && (
         <NavbarExtendedContainer>
           <NavbarLinkExtended to="/"> Home</NavbarLinkExtended>
-          <NavbarLinkExtended to="/products"> Products</NavbarLinkExtended>
+          <NavbarLinkExtended to="/portfolio"> Portfolio</NavbarLinkExtended>
           <NavbarLinkExtended to="/contact"> Contact Us</NavbarLinkExtended>
           <NavbarLinkExtended to="/about"> About Us</NavbarLinkExtended>
         </NavbarExtendedContainer>

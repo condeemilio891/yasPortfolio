@@ -25,6 +25,7 @@ export const RightContainer = styled.div`
   display: flex;
   justify-content: flex-end;
   padding-right: 50px;
+  background-color: white;
 `;
 
 export const NavbarInnerContainer = styled.div`
