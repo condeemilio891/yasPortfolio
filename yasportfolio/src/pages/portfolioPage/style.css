@@ -2,3 +2,15 @@
     margin-top: 20%;
     color:blue
 }
+
+.portfolioGrid{
+    display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Display 3 cards in each row */
+  grid-gap: 20px; /* Add gap between cards */
+}
+
+@media (max-width: 700px) {
+    .portfolioGrid {
+      grid-template-columns: 1fr; /* Display 1 card per row */
+    }
+  }

@@ -8,6 +8,8 @@ export const CardBody = styled.div`
     background-size: cover;
     padding:10rem 0 0;
     max-width:35ch;
+
+
 `
 // export const CardContent= styled.h2`
 //     padding:1.5em;
