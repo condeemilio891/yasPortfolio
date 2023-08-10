@@ -12,6 +12,7 @@ const PortfolioPage = () => {
    <Card img={image1}></Card>
    <Card img={image2} />
       <Card img={image3} />
+      <Card img= {image1}></Card>
       </div>
    </>
    

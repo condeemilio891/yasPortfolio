@@ -21,7 +21,7 @@ function Navbar() {
       <NavbarInnerContainer>
         <LeftContainer>
           <NavbarLinkContainer>
-            <NavbarLink to="/"> Home</NavbarLink>
+            <NavbarLink to="/yasPortfolio"> Home</NavbarLink>
             <NavbarLink to="/portfolio"> Portfolio</NavbarLink>
             <NavbarLink to="/contact"> Contact Us</NavbarLink>
             <NavbarLink to="/about"> About Us</NavbarLink>
