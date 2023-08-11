@@ -10,6 +10,7 @@ import {
   Logo,
   OpenLinksButton,
   NavbarLinkExtended,
+  NavHeader,
 } from "../../styles/NavBarStyle";
 import LogoImg from "../../assets/fatfattatslogo.png";
 
@@ -18,20 +19,24 @@ function Navbar() {
 
   return (
     <NavbarContainer extendNavbar={extendNavbar}>
+     
       <NavbarInnerContainer>
-        <LeftContainer>
-          <NavbarLinkContainer>
-            <NavbarLink to="/yasPortfolio"> Home</NavbarLink>
-            <NavbarLink to="/portfolio"> Portfolio</NavbarLink>
-            <NavbarLink to="/contact"> Contact Us</NavbarLink>
-            <NavbarLink to="/about"> About Us</NavbarLink>
-            <OpenLinksButton
+      <OpenLinksButton
               onClick={() => {
                 setExtendNavbar((curr) => !curr);
               }}
             >
               {extendNavbar ? <>&#10005;</> : <> &#8801;</>}
             </OpenLinksButton>
+        <LeftContainer>
+        
+          <NavbarLinkContainer>
+          <NavHeader>Yasmine</NavHeader>
+            <NavbarLink to="/yasPortfolio"> Home</NavbarLink>
+            <NavbarLink to="/portfolio"> Portfolio</NavbarLink>
+            <NavbarLink to="/contact"> Contact</NavbarLink>
+            <NavbarLink to="https://www.instagram.com/fatfattats"> insta</NavbarLink>
+           
           </NavbarLinkContainer>
         </LeftContainer>
         <RightContainer>
@@ -43,7 +48,7 @@ function Navbar() {
           <NavbarLinkExtended to="/"> Home</NavbarLinkExtended>
           <NavbarLinkExtended to="/portfolio"> Portfolio</NavbarLinkExtended>
           <NavbarLinkExtended to="/contact"> Contact Us</NavbarLinkExtended>
-          <NavbarLinkExtended to="/about"> About Us</NavbarLinkExtended>
+          <NavbarLinkExtended to="https://www.instagram.com/fatfattats"> insta</NavbarLinkExtended>
         </NavbarExtendedContainer>
       )}
     </NavbarContainer>

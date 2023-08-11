@@ -1,4 +1,7 @@
-
+body {
+  background-color: #F2F2F2;
+  margin: 0; /* To remove default body margin */
+}
 
 #container{
     display: flex;
@@ -30,7 +33,7 @@
     
 }
 
-.descriptin p{
+.description p{
     font-size:22px;
 }
 

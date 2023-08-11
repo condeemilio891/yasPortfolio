@@ -14,7 +14,7 @@ function App() {
     <Route exact path= "/" element={<BackgroundSlider/>}/>
     <Route path="/portfolio" element={<PortfolioPage/>}/>
     <Route path="/contact" element= {<ContactPage/>}/>
-    <Route path="/about"/>
+    
   </Routes>
 </Router> 
 // adding example 
