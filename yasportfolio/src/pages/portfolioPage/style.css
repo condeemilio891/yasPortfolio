@@ -1,16 +1,17 @@
-.portfolioGrid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
- 
+.helloText{
+    margin-top: 20%;
+    color:blue
+}
+
+.portfolioGrid{
+    display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Display 3 cards in each row */
+  grid-gap: 0%; /* Add gap between cards */
 }
 
 @media (max-width: 700px) {
-  .portfolioGrid {
-    grid-template-columns: 1fr;
+    .portfolioGrid {
+      grid-template-columns: 1fr; /* Display 1 card per row */
+      grid-gap: 10rem;
+    }
   }
-}
-
-/* Add gap between columns */
-.portfolioGrid > * {
-  margin-right: 5rem; /* Adjust the value as needed */
-}
