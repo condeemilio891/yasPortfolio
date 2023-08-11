@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { motion } from 'framer-motion';
 import {
   NavbarContainer,
   LeftContainer,
@@ -16,8 +17,19 @@ import LogoImg from "../../assets/fatfattatslogo.png";
 
 function Navbar() {
   const [extendNavbar, setExtendNavbar] = useState(false);
-
+  const pageVariants = {
+    initial: { opacity: 0, x: '-100%' },
+    animate: { opacity: 1, x: 0 },
+    exit: { opacity: 0, x: '100%' },
+  };
   return (
+    <motion.div
+    initial="initial"
+    animate="animate"
+    exit="exit"
+    variants={pageVariants}
+    transition={{ duration: 0.5 }}
+  >
     <NavbarContainer extendNavbar={extendNavbar}>
      
       <NavbarInnerContainer>
@@ -52,6 +64,7 @@ function Navbar() {
         </NavbarExtendedContainer>
       )}
     </NavbarContainer>
+    </motion.div>
   );
 }
 

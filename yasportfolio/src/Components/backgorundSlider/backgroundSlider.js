@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react'
 import './backgroundSliderStyle.css'
-
+import { motion } from 'framer-motion';
 import image1 from "../../assets/tatPic1.png"
 import image2 from"../../assets/tatPic2.png"
 import image3 from "../../assets/tatPic3.png"
@@ -37,7 +37,19 @@ const BackgroundSlider = () => {
       setCurrentState(currentState)
     }
 
+    const pageVariants = {
+      initial: { opacity: 0,  },
+      animate: { opacity: 1, },
+      exit: { opacity: 0,  },
+    };
   return (
+    <motion.div
+      initial="initial"
+      animate="animate"
+      exit="exit"
+      variants={pageVariants}
+      transition={{ duration: 2 }}
+    >
    <div id='container'>
     <div style={bgImageStyle}></div>
     <div className='description'>
@@ -59,6 +71,7 @@ const BackgroundSlider = () => {
     </div>
 
    </div>
+   </motion.div>
   )
 }
 
