@@ -42,10 +42,14 @@ const BackgroundSlider = () => {
     <div style={bgImageStyle}></div>
     <div className='description'>
       <div className='titleContainer'>
-      <h1>Black and Gray</h1>
+    {/* <h1>Fat Fat Tats</h1> */}
       {/* <p> tattoo artist</p> */}
-      <div className='button-17'> Schedule a Session</div>
+
+      {/* schedule a session button */}
+      {/* <div className='button-17'> Schedule a Session</div> */}
       </div>
+
+      {/* Carousel */}
       <div className='carousel-build'>
         {
           imageSlide.map((imageSlide,currentState)=>(
