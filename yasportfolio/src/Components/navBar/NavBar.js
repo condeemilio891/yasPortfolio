@@ -59,7 +59,7 @@ function Navbar() {
         <NavbarExtendedContainer>
           <NavbarLinkExtended to="/"> Home</NavbarLinkExtended>
           <NavbarLinkExtended to="/portfolio"> Portfolio</NavbarLinkExtended>
-          <NavbarLinkExtended to="/contact"> Contact Us</NavbarLinkExtended>
+          <NavbarLinkExtended to="/contact"> Contact</NavbarLinkExtended>
           <NavbarLinkExtended to="https://www.instagram.com/fatfattats"> insta</NavbarLinkExtended>
         </NavbarExtendedContainer>
       )}
