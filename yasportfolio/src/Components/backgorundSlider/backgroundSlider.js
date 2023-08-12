@@ -11,7 +11,12 @@ const BackgroundSlider = () => {
 {url:image1},{url:image2},{url:image3}
    
 ]
+
+const [mobileStyle, setMobileStyle] = useState(false);
+
     const [currentState,setCurrentState]=useState(2)
+
+
     useEffect(()=>{
       const timer= setTimeout(()=>{
         if(currentState===2){
@@ -28,15 +33,16 @@ const BackgroundSlider = () => {
         backgroundPosition: 'center',
         backgroundSize: 'contain',
         height: '100vh',
-        width: '80vw',
+        width: '150%',
         top:0,
         left:0,
        
     }
+
     const gotoNext=()=>{
       setCurrentState(currentState)
     }
-
+// for animation
     const pageVariants = {
       initial: { opacity: 0,  },
       animate: { opacity: 1, },
@@ -51,7 +57,11 @@ const BackgroundSlider = () => {
       transition={{ duration: 2 }}
     >
    <div id='container'>
-    <div style={bgImageStyle}></div>
+
+
+    <div style= {bgImageStyle}></div>
+
+
     <div className='description'>
       <div className='titleContainer'>
     {/* <h1>Fat Fat Tats</h1> */}
