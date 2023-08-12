@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/yasPortfolio/static/css/main.ec9c90f3.css",
-    "main.js": "/yasPortfolio/static/js/main.e4821a7b.js",
+    "main.css": "/yasPortfolio/static/css/main.fd496fd9.css",
+    "main.js": "/yasPortfolio/static/js/main.f3f6a2e1.js",
     "static/js/787.be358811.chunk.js": "/yasPortfolio/static/js/787.be358811.chunk.js",
     "static/media/tatPic3.png": "/yasPortfolio/static/media/tatPic3.96ce4ceb3ee01f45f48f.png",
     "static/media/tatPic1.png": "/yasPortfolio/static/media/tatPic1.0cca3cbecac6ecbbb09c.png",
     "static/media/tatPic2.png": "/yasPortfolio/static/media/tatPic2.d92ab101096af2e73f31.png",
     "static/media/fatfattatslogo.png": "/yasPortfolio/static/media/fatfattatslogo.adc6a9e8a59d91da97bd.png",
     "index.html": "/yasPortfolio/index.html",
-    "main.ec9c90f3.css.map": "/yasPortfolio/static/css/main.ec9c90f3.css.map",
-    "main.e4821a7b.js.map": "/yasPortfolio/static/js/main.e4821a7b.js.map",
+    "main.fd496fd9.css.map": "/yasPortfolio/static/css/main.fd496fd9.css.map",
+    "main.f3f6a2e1.js.map": "/yasPortfolio/static/js/main.f3f6a2e1.js.map",
     "787.be358811.chunk.js.map": "/yasPortfolio/static/js/787.be358811.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ec9c90f3.css",
-    "static/js/main.e4821a7b.js"
+    "static/css/main.fd496fd9.css",
+    "static/js/main.f3f6a2e1.js"
   ]
 }
