@@ -87,6 +87,11 @@ export const Logo = styled.img`
   margin: 10px;
   max-width: 180px;
   height: auto;
+
+  
+  @media (min-width: 700px) {
+    display: none;
+  }
 `;
 
 export const OpenLinksButton = styled.button`

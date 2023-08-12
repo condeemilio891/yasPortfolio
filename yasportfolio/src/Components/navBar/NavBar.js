@@ -52,7 +52,7 @@ function Navbar() {
           </NavbarLinkContainer>
         </LeftContainer>
         <RightContainer>
-          <Logo src={LogoImg}></Logo>
+          {/* <Logo src={LogoImg}></Logo> */}
         </RightContainer>
       </NavbarInnerContainer>
       {extendNavbar && (
