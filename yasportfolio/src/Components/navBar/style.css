@@ -1,0 +1,28 @@
+.navAnchor {
+    /* Existing CSS properties */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 1.5em;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 5px 45px rgba(0, 0, 0, 0.1);
+    transition: 0.5s;
+    color: black;
+    cursor: pointer;
+    margin:0.3em;
+    transition: transform 0.5s;
+  }
+  
+  @media (max-width: 700px) {
+    .navAnchor {
+      display: inline-block;
+    }
+  }
+
+  .navAnchor:hover {
+    /* Move button up 4px on hover */
+    transform: translateY(-4px);
+  }

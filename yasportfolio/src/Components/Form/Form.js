@@ -1,10 +1,56 @@
 import React, {useState} from 'react'
-import {StyledFormWrapper,StyledForm,StyledInput,StyledButton,StyledFieldset,StyledTextArea,StyledError,initalState} from "../../styles/FormStyle"
+import {StyledFormWrapper,StyledForm,StyledInput,
+  StyledButton,StyledFieldset,StyledTextArea,StyledError,initalState,
+ContactHeader,
+ContactBox} from "../../styles/FormStyle"
+import { Logo } from '../../styles/FormStyle';
+import LogoImg from "../../assets/fatfattatslogo.png";
+import emailjs from 'emailjs-com';
+
+
+
+
 
 const Form = () => {
     const [state, setState] = useState(initalState);
     const [error, setError] = useState('');
   
+// send email function 
+
+function EmailForm() {
+  const [status,setStatus]=useState('')
+
+  const handleSendEmail=(e)=>{
+    e.preventDefault();
+    // set up the email service 
+
+    const serviceID="put your service ID here";
+    const templateID=" put the template ID here";
+    const UserId="put your user ID here"
+
+    // create and email object 
+
+    const email={
+      to:"put email here",
+      from: "create a varible that grabs the value of the txtbox",
+      subject:"Hello from ema",
+      text: "THis is a test email"
+
+    }
+
+    emailjs.send(serviceID,templateID,email,userID)
+    .then(response=>{
+      setStatus("email sent successfully");
+    })
+    .catch(error=>{
+      setStatus("error sending email try again")
+    })
+
+  }
+}
+
+
+   
     const handleSubmit = e => {
       e.preventDefault();
       console.log('submitted!');
@@ -34,8 +80,15 @@ const Form = () => {
     <>
     
     <StyledFormWrapper>
+    <ContactBox>
+          fdadfas
+        </ContactBox>
+        
       <StyledForm onSubmit={handleSubmit}>
-        <h2>Contact Form</h2>
+
+      <Logo src={LogoImg}></Logo>
+        <ContactHeader>Contact Form</ContactHeader>
+       
         <label htmlFor="name">Name</label>
         <StyledInput
           type="text"
@@ -50,30 +103,17 @@ const Form = () => {
           value={state.email}
           onChange={handleInput}
         />
-        <StyledFieldset>
-          <legend>Gender</legend>
-          <label>
-            <input
-              type="radio"
-              value="female"
-              name="gender"
-              checked={state.gender === 'female'}
-              onChange={handleInput}
-            />
-            Female
-          </label>
-          <label>
-            <input
-              type="radio"
-              value="male"
-              name="gender"
-              checked={state.gender === 'male'}
-              onChange={handleInput}
-            />
-            Male
-          </label>
-        </StyledFieldset>
-        <label htmlFor="message">Message</label>
+        <label htmlfor="phone">Phone</label>
+        <StyledInput
+        type = "phone"
+        name= "phone"
+        value={state.phone}
+        onChange={handleInput}>
+          
+          
+        </StyledInput>
+        <label htmlFor="message">Message: <span style={{fontStyle:"italic"}}>Describe the tattoo you want. Make sure to include any references that can help the artist
+          </span></label>
         <StyledTextArea
           name="message"
           value={state.message}

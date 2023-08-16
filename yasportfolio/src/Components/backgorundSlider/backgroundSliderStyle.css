@@ -1,5 +1,6 @@
 body {
-  background-color: #F2F2F2;
+  /* background-color: #F2F2F2; */
+  background-image: url(../../assets/blackAndGrayBG.jpg);
   margin: 0; /* To remove default body margin */
 }
 
@@ -68,6 +69,7 @@ body {
 
   .bg-image {
     width: 100vw;
+    
   }
 
   .description {

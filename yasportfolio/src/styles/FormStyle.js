@@ -11,6 +11,8 @@ const sharedStyles = css`
 `;
 
 export const StyledFormWrapper = styled.div`
+  /* background-color: white; */
+  background-image: url(../../assets/blackAndGrayBG.jpg);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -18,14 +20,31 @@ export const StyledFormWrapper = styled.div`
   padding: 0 20px;
 `;
 
+export const ContactBox=styled.div` 
+height:20%;
+width: 15%;
+display:flex;
+justify-content:center; 
+align-items: center;
+background-color: white;
+float:left;
+color:black
+
+
+
+
+`
+
 export const StyledForm = styled.form`
+color:lightgray;
   width: 100%;
   max-width: 700px;
   padding: 40px;
-  background-color: #fff;
+  background-color: black;
   border-radius: 10px;
   box-sizing: border-box;
   box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
+  
 `;
 
 export const StyledInput = styled.input`
@@ -83,5 +102,25 @@ export const initalState = {
   name: '',
   email: '',
   message: '',
-  gender: ''
+  phone: ''
 };
+
+
+export const Logo = styled.img`
+  margin: 10px;
+  max-width: 180px;
+  height: 5rem;
+  width: 5rem;
+  z-index: 2;
+  float: right;
+
+  /* @media (min-width: 700px) {
+    display: none;
+  } */
+`
+export const ContactHeader=styled.h1`
+  font-size: 3rem;
+  color:white;
+
+
+`

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./style.css"
 import { motion } from 'framer-motion';
 import {
   NavbarContainer,
@@ -12,16 +13,26 @@ import {
   OpenLinksButton,
   NavbarLinkExtended,
   NavHeader,
+  NavbarExtendedIconContainer,
+  NavbarIconContainer
 } from "../../styles/NavBarStyle";
-import LogoImg from "../../assets/fatfattatslogo.png";
+import { FaFacebook,FaLinkedin,FaTwitter,FaInstagram } from "react-icons/fa";
 
 function Navbar() {
+
+ 
   const [extendNavbar, setExtendNavbar] = useState(false);
+  
+  const [activeLink,setActiveLink]=useState(false);
   const pageVariants = {
     initial: { opacity: 0, x: '-100%' },
     animate: { opacity: 1, x: 0 },
     exit: { opacity: 0, x: '100%' },
   };
+  const handleLinkClick = (link) => {
+    setActiveLink(link);
+  };
+
   return (
     <motion.div
     initial="initial"
@@ -43,16 +54,31 @@ function Navbar() {
         <LeftContainer>
         
           <NavbarLinkContainer>
-          <NavHeader>Yasmine</NavHeader>
-            <NavbarLink to="/yasPortfolio"> Home</NavbarLink>
-            <NavbarLink to="/portfolio"> Portfolio</NavbarLink>
-            <NavbarLink to="/contact"> Contact</NavbarLink>
-            <NavbarLink to="https://www.instagram.com/fatfattats"> insta</NavbarLink>
+          <NavHeader>Fat Fat Tats</NavHeader>
+         
+            <NavbarLink to="/yasPortfolio"
+            onClick={() => handleLinkClick("Home")} // Update active link
+            className={activeLink === "Home" ? "active" : ""}> Home</NavbarLink>
+           
+            <NavbarLink to="/portfolio"
+            onClick={() => handleLinkClick("Portfolio")} // Update active link
+            className={activeLink === "Portfolio" ? "active" : ""}> Portfolio</NavbarLink>
+            <NavbarLink to="/contact"
+              onClick={() => handleLinkClick("Portfolio")} // Update active link
+              className={activeLink === "Portfolio" ? "active" : ""}
+            > Contact</NavbarLink>
+         
+         
            
           </NavbarLinkContainer>
         </LeftContainer>
         <RightContainer>
-          {/* <Logo src={LogoImg}></Logo> */}
+        <NavbarIconContainer>
+          
+                <a className="navAnchor"href="https://www.instagram.com/fatfattats"><FaInstagram/></a>
+               <a className="navAnchor"href="https://twitter.com/fatfattats"><FaTwitter/></a>
+               <a className="navAnchor"href="https://twitter.com/fatfattats"><FaFacebook/></a>
+          </NavbarIconContainer>
         </RightContainer>
       </NavbarInnerContainer>
       {extendNavbar && (
@@ -60,7 +86,11 @@ function Navbar() {
           <NavbarLinkExtended to="/"> Home</NavbarLinkExtended>
           <NavbarLinkExtended to="/portfolio"> Portfolio</NavbarLinkExtended>
           <NavbarLinkExtended to="/contact"> Contact</NavbarLinkExtended>
-          <NavbarLinkExtended to="https://www.instagram.com/fatfattats"> insta</NavbarLinkExtended>
+            <NavbarExtendedIconContainer>
+                <a className="navAnchor"href="https://www.instagram.com/fatfattats"><FaInstagram/></a>
+               <a className="navAnchor"href="https://twitter.com/fatfattats"><FaTwitter/></a>
+               <a className="navAnchor"href="https://twitter.com/fatfattats"><FaFacebook/></a>
+          </NavbarExtendedIconContainer>
         </NavbarExtendedContainer>
       )}
     </NavbarContainer>

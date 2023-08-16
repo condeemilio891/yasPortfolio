@@ -47,6 +47,23 @@ export const NavbarLinkContainer = styled.div`
  
 `;
 
+export const NavbarIconContainer=styled.div`
+
+display: flex;
+align-items: center;
+justify-self: flex-end;
+
+
+`
+
+export const NavbarExtendedIconContainer= styled.div`
+height: auto;
+width: auto;
+display: flex;
+align-items: center;
+
+`
+
 export const NavbarLink = styled(Link)`
   color: black;
   font-size: x-large;
@@ -65,7 +82,7 @@ export const NavbarLink = styled(Link)`
 export const NavHeader= styled.p` 
  color: black;
  font-size: xx-large;
- font-family: 'Borel', cursive;
+ font-family: 'Fruktur', cursive;
  text-decoration: none;
  /* display: flex; */
  /* align-self:stretch; */
@@ -83,16 +100,7 @@ export const NavbarLinkExtended = styled(Link)`
   margin: 10px;
 `;
 
-export const Logo = styled.img`
-  margin: 10px;
-  max-width: 180px;
-  height: auto;
 
-  
-  @media (min-width: 700px) {
-    display: none;
-  }
-`;
 
 export const OpenLinksButton = styled.button`
   width: 70px;
