@@ -1,19 +1,20 @@
 {
   "files": {
-    "main.css": "/yasPortfolio/static/css/main.2c843a3d.css",
-    "main.js": "/yasPortfolio/static/js/main.f08b8527.js",
+    "main.css": "/yasPortfolio/static/css/main.5354aec7.css",
+    "main.js": "/yasPortfolio/static/js/main.c3505d88.js",
     "static/js/787.be358811.chunk.js": "/yasPortfolio/static/js/787.be358811.chunk.js",
+    "static/media/blackAndGrayBG.jpg": "/yasPortfolio/static/media/blackAndGrayBG.43bf8d41481b9662a73b.jpg",
     "static/media/tatPic3.png": "/yasPortfolio/static/media/tatPic3.96ce4ceb3ee01f45f48f.png",
     "static/media/tatPic1.png": "/yasPortfolio/static/media/tatPic1.0cca3cbecac6ecbbb09c.png",
     "static/media/tatPic2.png": "/yasPortfolio/static/media/tatPic2.d92ab101096af2e73f31.png",
     "static/media/fatfattatslogo.png": "/yasPortfolio/static/media/fatfattatslogo.adc6a9e8a59d91da97bd.png",
     "index.html": "/yasPortfolio/index.html",
-    "main.2c843a3d.css.map": "/yasPortfolio/static/css/main.2c843a3d.css.map",
-    "main.f08b8527.js.map": "/yasPortfolio/static/js/main.f08b8527.js.map",
+    "main.5354aec7.css.map": "/yasPortfolio/static/css/main.5354aec7.css.map",
+    "main.c3505d88.js.map": "/yasPortfolio/static/js/main.c3505d88.js.map",
     "787.be358811.chunk.js.map": "/yasPortfolio/static/js/787.be358811.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2c843a3d.css",
-    "static/js/main.f08b8527.js"
+    "static/css/main.5354aec7.css",
+    "static/js/main.c3505d88.js"
   ]
 }
