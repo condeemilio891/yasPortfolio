@@ -1,12 +1,18 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
-
+export const GothStyle= styled.div`
+ @font-face {
+    font-family: 'DarkPix Gothic';
+    src: url('https://www.fontsaddict.com/fontface/darkpix-gothic.ttf') format('truetype');
+    /* Add other font formats if needed */
+  }
+`
 
 export const NavbarContainer = styled.nav`
   width: 100%;
   height: ${(props) => (props.extendNavbar ? "23%" : "80px")};
-  background-color: white;
+  background-color: black;
   display: flex;
   flex-direction: column;
   /* justify-content: space-evenly; */
@@ -21,8 +27,7 @@ export const LeftContainer = styled.div`
   display: flex;
   align-items: center;
   padding-left: 20%;
-  
-  
+
 `;
 
 export const RightContainer = styled.div`
@@ -31,6 +36,7 @@ export const RightContainer = styled.div`
   justify-content: flex-end;
   padding-right: 50px;
   background-color: white;
+
   
 `;
 
@@ -65,22 +71,24 @@ align-items: center;
 `
 
 export const NavbarLink = styled(Link)`
-  color: black;
+  color: ${props => props.isActive ? 'darkgray' : 'white'};
   font-size: x-large;
-  font-family: 'EB Garamond', serif;
+  font-family: 'DarkPix Gothic', sans-serif;
   text-decoration: none;
   margin-left: 2rem;
   margin-right: 2rem;
   margin-top: 3rem;
-
-
+  font-weight: ${props=>props.isActive ? "bolder":"auto"};
+  text-shadow: ${props=>props.isActive ?"0 2px 3px #747474, 1px 3px 4px #222,  0 8px 3px #474747, 0 11px 4px #747474,0 14px 4px #565656,0 17px 4px #343434,0 20px 4px #171717;":"0"}; 
   @media (max-width: 700px) {
     display: none;
   }
+
+  
 `;
 
 export const NavHeader= styled.p` 
- color: black;
+ color: white;
  font-size: xx-large;
  font-family: 'Fruktur', cursive;
  text-decoration: none;
@@ -93,11 +101,13 @@ export const NavHeader= styled.p`
 `
 
 export const NavbarLinkExtended = styled(Link)`
-  color: black;
+    color: ${props => props.isActive ? 'darkgray' : 'white'};
   font-size: x-large;
   font-family: Arial, Helvetica, sans-serif;
   text-decoration: none;
   margin: 10px;
+  font-weight: ${props=>props.isActive ? "bolder":"auto"};
+  text-shadow: ${props=>props.isActive ?"0 2px 3px #747474, 1px 3px 4px #222,  0 8px 3px #474747, 0 11px 4px #747474,0 14px 4px #565656,0 17px 4px #343434,0 20px 4px #171717;":"0"}; 
 `;
 
 
@@ -107,7 +117,7 @@ export const OpenLinksButton = styled.button`
   height: 50px;
   background: none;
   border: none;
-  color: black;
+  color: white;
   font-size: 45px;
   cursor: pointer;
 

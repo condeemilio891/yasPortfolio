@@ -14,7 +14,8 @@ import {
   NavbarLinkExtended,
   NavHeader,
   NavbarExtendedIconContainer,
-  NavbarIconContainer
+  NavbarIconContainer,
+  GothStyle,
 } from "../../styles/NavBarStyle";
 import { FaFacebook,FaLinkedin,FaTwitter,FaInstagram } from "react-icons/fa";
 
@@ -24,6 +25,7 @@ function Navbar() {
   const [extendNavbar, setExtendNavbar] = useState(false);
   
   const [activeLink,setActiveLink]=useState(false);
+
   const pageVariants = {
     initial: { opacity: 0, x: '-100%' },
     animate: { opacity: 1, x: 0 },
@@ -41,6 +43,7 @@ function Navbar() {
     variants={pageVariants}
     transition={{ duration: 0.5 }}
   >
+    <GothStyle>
     <NavbarContainer extendNavbar={extendNavbar}>
      
       <NavbarInnerContainer>
@@ -58,14 +61,14 @@ function Navbar() {
          
             <NavbarLink to="/yasPortfolio"
             onClick={() => handleLinkClick("Home")} // Update active link
-            className={activeLink === "Home" ? "active" : ""}> Home</NavbarLink>
+            isActive={activeLink==="Home"}> Home</NavbarLink>
            
             <NavbarLink to="/portfolio"
             onClick={() => handleLinkClick("Portfolio")} // Update active link
-            className={activeLink === "Portfolio" ? "active" : ""}> Portfolio</NavbarLink>
+            isActive={activeLink==="Portfolio"}> Portfolio</NavbarLink>
             <NavbarLink to="/contact"
-              onClick={() => handleLinkClick("Portfolio")} // Update active link
-              className={activeLink === "Portfolio" ? "active" : ""}
+              onClick={() => handleLinkClick("Contact")} // Update active link
+              isActive={activeLink==="Contact"}
             > Contact</NavbarLink>
          
          
@@ -83,17 +86,20 @@ function Navbar() {
       </NavbarInnerContainer>
       {extendNavbar && (
         <NavbarExtendedContainer>
-          <NavbarLinkExtended to="/"> Home</NavbarLinkExtended>
-          <NavbarLinkExtended to="/portfolio"> Portfolio</NavbarLinkExtended>
-          <NavbarLinkExtended to="/contact"> Contact</NavbarLinkExtended>
-            <NavbarExtendedIconContainer>
-                <a className="navAnchor"href="https://www.instagram.com/fatfattats"><FaInstagram/></a>
-               <a className="navAnchor"href="https://twitter.com/fatfattats"><FaTwitter/></a>
-               <a className="navAnchor"href="https://twitter.com/fatfattats"><FaFacebook/></a>
-          </NavbarExtendedIconContainer>
+          <NavbarLinkExtended to="/"
+           onClick={() => handleLinkClick("Home")} // Update active link
+           isActive={activeLink==="Home"}> Home</NavbarLinkExtended>
+          <NavbarLinkExtended to="/portfolio"
+           onClick={() => handleLinkClick("Portfolio")} // Update active link
+           isActive={activeLink==="Portfolio"}> Portfolio</NavbarLinkExtended>
+          <NavbarLinkExtended to="/contact"
+           onClick={() => handleLinkClick("Contact")} // Update active link
+           isActive={activeLink==="Contact"}> Contact</NavbarLinkExtended>
+        
         </NavbarExtendedContainer>
       )}
     </NavbarContainer>
+    </GothStyle>
     </motion.div>
   );
 }

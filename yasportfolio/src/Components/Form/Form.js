@@ -1,8 +1,8 @@
 import React, {useState} from 'react'
 import {StyledFormWrapper,StyledForm,StyledInput,
   StyledButton,StyledFieldset,StyledTextArea,StyledError,initalState,
-ContactHeader,
-ContactBox} from "../../styles/FormStyle"
+ContactHeader,ContactBoxTitle,ContactBoxText, MessageWrapper,
+ContactBox,ContactMobileDesc} from "../../styles/FormStyle"
 import { Logo } from '../../styles/FormStyle';
 import LogoImg from "../../assets/fatfattatslogo.png";
 import emailjs from 'emailjs-com';
@@ -78,17 +78,23 @@ function EmailForm() {
       };
   return (
     <>
-    
+   
+   
     <StyledFormWrapper>
+   
     <ContactBox>
-          fdadfas
+      <ContactBoxTitle> Contact</ContactBoxTitle>
+     <ContactBoxText>If you are interested in my services or just want to say Hello
+      feel free to contact me
+     </ContactBoxText>
         </ContactBox>
         
       <StyledForm onSubmit={handleSubmit}>
-
-      <Logo src={LogoImg}></Logo>
-        <ContactHeader>Contact Form</ContactHeader>
-       
+   
+      {/* <Logo src={LogoImg}></Logo> */}
+        <ContactHeader>Contact</ContactHeader>
+       <ContactMobileDesc>If you are interested in my services or just want to say Hello
+      feel free to contact me</ContactMobileDesc>
         <label htmlFor="name">Name</label>
         <StyledInput
           type="text"
@@ -110,15 +116,16 @@ function EmailForm() {
         value={state.phone}
         onChange={handleInput}>
           
-          
+         
         </StyledInput>
-        <label htmlFor="message">Message: <span style={{fontStyle:"italic"}}>Describe the tattoo you want. Make sure to include any references that can help the artist
-          </span></label>
+       <MessageWrapper>
+        <label htmlFor="message">Message:</label>
         <StyledTextArea
           name="message"
           value={state.message}
           onChange={handleInput}
         />
+        </MessageWrapper>
         {error && (
           <StyledError>
             <p>{error}</p>

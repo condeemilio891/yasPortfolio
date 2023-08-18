@@ -11,27 +11,55 @@ const sharedStyles = css`
 `;
 
 export const StyledFormWrapper = styled.div`
-  /* background-color: white; */
   background-image: url(../../assets/blackAndGrayBG.jpg);
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: center; /* Center content horizontally */
+  align-items: flex-start; /* Center content vertically */
   height: 100vh;
-  padding: 0 20px;
+  padding: 20px;
+  /* Mobile responsiveness */
+  @media (max-width: 700px) {
+    flex-direction: column;
+    align-items: center;
+  }
+  
 `;
 
-export const ContactBox=styled.div` 
-height:20%;
-width: 15%;
-display:flex;
-justify-content:center; 
-align-items: center;
-background-color: white;
-float:left;
-color:black
+export const ContactBox = styled.div`
+  height: 80%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; 
+  align-items: flex-start; 
+  background-color: none;
+  color: white;
+  /* border for tsting */
+  /* border: white;
+  border-style: double;
+border-width: .3em;
+border-radius: 10%; */ 
+margin-right: 3rem;
+ 
+  margin-top: 2rem;
+    /* Mobile responsiveness */
+    @media (max-width: 700px) {
+    display: none;
+  }
+`;
+export const ContactBoxTitle= styled.h1`
+font-size: 3rem;
+color:white;
+opacity: 1;
+margin-left: 7%;
+`
 
-
-
+export const ContactBoxText = styled.p`
+font-size: 1.4rem;
+color:White;
+margin-left: 5%;
+opacity: 1;
+font-style: italic;
 
 `
 
@@ -41,29 +69,44 @@ color:lightgray;
   max-width: 700px;
   padding: 40px;
   background-color: black;
-  border-radius: 10px;
+  border-radius: 10%;
   box-sizing: border-box;
-  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
+   box-shadow: 0px 0px 30px 5px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(145deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1));
+  height: 100%;
+  margin-left: 4rem;
+
   
 `;
 
 export const StyledInput = styled.input`
   display: block;
-  width: 100%;
+  width: 60%;
+  margin-left: auto;
   ${sharedStyles}
 `;
 
+
+export const MessageWrapper=styled.div`
+display: flex;
+flex-direction: column;
+
+`
 export const StyledTextArea = styled.textarea`
-  background-color: #eee;
-  width: 100%;
+    background-color: #eee;
+  width: 60%;
   min-height: 100px;
   resize: none;
+  ${sharedStyles}
+  margin-left: auto; 
+ 
+ 
   ${sharedStyles}
 `;
 export const StyledButton = styled.button`
   display: block;
-  background-color: #f7797d;
-  color: #fff;
+  background-color: darkgray;
+  color: #000000;
   font-size: 0.9rem;
   border: 0;
   border-radius: 5px;
@@ -121,6 +164,23 @@ export const Logo = styled.img`
 export const ContactHeader=styled.h1`
   font-size: 3rem;
   color:white;
+  display: none;
+   /* Mobile responsiveness */
+   @media (max-width: 700px) {
+    display: flex;
+  }
 
+`
+
+export const ContactMobileDesc = styled.p`
+
+font-size: 1rem;
+color:White;
+display: none;
+
+@media (max-width:700px) {
+  display: flex;
+  
+}
 
 `
