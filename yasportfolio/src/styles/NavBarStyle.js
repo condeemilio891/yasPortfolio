@@ -96,6 +96,10 @@ export const NavHeader= styled.p`
  /* align-self:stretch; */
  /* float: right; */
 
+ @media(max-width:700px){
+  font-size: medium;
+ }
+
 
 
 `
